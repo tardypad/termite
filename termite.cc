@@ -1746,6 +1746,7 @@ int main(int argc, char **argv) {
     gtk_container_add(GTK_CONTAINER(panel_overlay), hbox);
     gtk_container_add(GTK_CONTAINER(hint_overlay), vte_widget);
     gtk_container_add(GTK_CONTAINER(window), panel_overlay);
+    gtk_window_set_decorated(GTK_WINDOW(window), false);
 
     if (!hold) {
         g_signal_connect(vte, "child-exited", G_CALLBACK(exit_with_status), nullptr);
