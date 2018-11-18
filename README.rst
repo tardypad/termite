@@ -1,3 +1,29 @@
+Termite minimal
+===============
+
+This is a stripped down version of the original Termite,
+which fits my personal usage.
+
+It adds:
+
+- disabling of client side decorations
+- put back the window geometry support
+
+It removes:
+
+- all features requiring overlays (selection mode, URL hints, scrollbar,...)
+- X11 specific code
+- feature to launch terminal in directory
+
+It results in a simpler program:
+
+- much shorter code
+- no unneeded keybinding
+- straightforward packaging
+
+Termite
+=======
+
 A keyboard-centric VTE-based terminal, aimed at use within a window manager
 with tiling and/or tabbing support.
 
