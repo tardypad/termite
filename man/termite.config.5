@@ -14,15 +14,8 @@ appears
 Have the terminal beep on the terminal bell.
 .IP \fIbold_is_bright\fR
 Display bold text in bright colors.
-.IP \fIbrowser\fR
-Set the default browser for opening links. If its not set,
-\fI$BROWSER\fR is read. If that's not set, url hints will be disabled.
-.IP \fIclickable_url\fR
-Auto-detected URLs can be clicked on to open them in your browser. Only
-enabled if a browser is configured or detected.
 .IP \fIhyperlinks\fR
-Enable support for applications to mark text as hyperlinks. Requires
-clickable_url to be set.
+Enable support for applications to mark text as hyperlinks.
 .IP \fIcursor_blink\fR
 Specify the how the terminal's cursor should behave. Accepts
 \fBsystem\fR to respect the gtk global configuration, \fBon\fR and
@@ -33,8 +26,6 @@ Specify how the cursor should look. Accepts \fBblock\fR, \fBibeam\fR and
 .IP \fIdynamic_title\fR
 Settings dynamic title allows the terminal and the shell to update the
 terminal's title.
-.IP \fIfilter_unmatched_urls\fR
-Whether to hide url hints not matching input in url hints mode.
 .IP \fIfont\fR
 The font description for the terminal's font.
 .IP \fIfullscreen\fR
@@ -52,15 +43,10 @@ Automatically hide the mouse pointer when you start typing.
 Set the number of lines to limit the terminal's scrollback. Setting
 the number of lines to 0 disables this feature, a negative value makes
 the scrollback "infinite".
-.IP \fIscrollbar\fR
-Specify scrollbar visibility and position. Accepts \fBoff\fR, \fBleft\fR and
-\fBright\fR.
 .IP \fIscroll_on_keystroke\fR
 Scroll to the bottom automatically when a key is pressed.
 .IP \fIscroll_on_output\fR
 Scroll to the bottom when the shell generates output.
-.IP \fIsearch_wrap\fR
-Search from top again when you hit the bottom.
 .IP \fIsize_hints\fR
 Enable size hints. Locks the terminal resizing to increments of the
 terminal's cell size. Requires a window manager that respects scroll
