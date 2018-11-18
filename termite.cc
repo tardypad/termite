@@ -39,7 +39,6 @@
 #include <gdk/gdkx.h>
 #endif
 
-#include "url_regex.hh"
 #include "util/clamp.hh"
 #include "util/maybe.hh"
 #include "util/memory.hh"
