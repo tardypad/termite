@@ -208,18 +208,6 @@ static void set_size_hints(GtkWindow *window, VteTerminal *vte) {
     gtk_window_set_geometry_hints(GTK_WINDOW(window), NULL, &hints, wh);
 }
 
-static void launch_in_directory(VteTerminal *vte) {
-    const char *uri = vte_terminal_get_current_directory_uri(vte);
-    if (!uri) {
-        g_printerr("no directory uri set\n");
-        return;
-    }
-    auto dir = make_unique(g_filename_from_uri(uri, nullptr, nullptr), g_free);
-    char term[] = "termite"; // maybe this should be argv[0]
-    char *cmd[] = {term, nullptr};
-    g_spawn_async(dir.get(), cmd, nullptr, G_SPAWN_SEARCH_PATH, nullptr, nullptr, nullptr, nullptr);
-}
-
 /* {{{ CALLBACKS */
 void window_title_cb(VteTerminal *vte, gboolean *dynamic_title) {
     const char *const title = *dynamic_title ? vte_terminal_get_window_title(vte) : nullptr;
@@ -276,9 +264,6 @@ gboolean key_press_cb(VteTerminal *vte, GdkEventKey *event, keybind_info *info) 
                 return TRUE;
             case GDK_KEY_equal:
                 reset_font_scale(vte, info->config.font_scale);
-                return TRUE;
-            case GDK_KEY_t:
-                launch_in_directory(vte);
                 return TRUE;
             case GDK_KEY_c:
 #if VTE_CHECK_VERSION(0, 50, 0)
