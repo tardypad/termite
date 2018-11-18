@@ -27,7 +27,7 @@ BUILDING
 ========
 ::
 
-    git clone --recursive https://github.com/thestinger/termite.git
+    git clone https://github.com/thestinger/termite.git
     cd termite && make
 
 KEYBINDINGS
