@@ -16,32 +16,20 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#include <algorithm>
 #include <array>
-#include <cstdlib>
-#include <cstring>
-#include <cmath>
 #include <functional>
 #include <limits>
 #include <map>
-#include <memory>
 #include <vector>
-#include <set>
-#include <string>
 
 #include <gtk/gtk.h>
 #include <vte/vte.h>
-
-#define PCRE2_CODE_UNIT_WIDTH 8
-#include <pcre2.h>
 
 #ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
 #endif
 
-#include "util/clamp.hh"
 #include "util/maybe.hh"
-#include "util/memory.hh"
 
 using namespace std::placeholders;
 

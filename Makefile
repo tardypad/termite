@@ -32,7 +32,7 @@ endif
 LDFLAGS := -s -Wl,--as-needed ${LDFLAGS}
 LDLIBS := ${shell pkg-config --libs ${GTK} ${VTE}}
 
-termite: termite.cc util/clamp.hh util/maybe.hh util/memory.hh
+termite: termite.cc util/maybe.hh
 	${CXX} ${CXXFLAGS} ${LDFLAGS} $< ${LDLIBS} -o $@
 
 install: termite termite.desktop termite.terminfo
