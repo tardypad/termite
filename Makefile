@@ -1,4 +1,4 @@
-VERSION = $(shell git describe --tags)
+VERSION = 14.91
 PREFIX = /usr/local
 GTK = gtk+-3.0
 VTE = vte-2.91
