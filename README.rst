@@ -7,7 +7,6 @@ which fits my personal usage.
 It adds:
 
 - disabling of client side decorations
-- put back the window geometry support
 - all digits keys are used for the modify_other_keys config
 
 It removes:
